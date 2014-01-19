@@ -1,11 +1,4 @@
-# Packer Template for Docker Images
-
-This repository contains a Packer template for building machine images
-that are Docker-ready on top of Ubuntu 12.04. This involves upgrading the
-kernel and installing Docker.
-
-Currently this is only setup for Amazon, but it should be trivial to add
-more platforms to this.
+# Packer Template with puppet for rails app maybe
 
 ## Usage
 
@@ -15,9 +8,8 @@ Then, clone this repository and `cd` into it.
 Run the following:
 
 ```
-$ export AWS_ACCESS_KEY="your aws access key"
-$ export AWS_SECRET_KEY="your aws secret key"
+$ export DO_CLIENT_ID="you do client id"
+$ export DO_API_KEY="your do api key"
 $ packer build template.json
 ```
 
-At the end of that, you'll have an AMI ready to go for Docker.
